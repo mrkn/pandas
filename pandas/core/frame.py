@@ -1751,7 +1751,7 @@ class DataFrame(NDFrame, OpsMixin):
     @classmethod
     def from_dict(
         cls,
-        data: dict,
+        data: Mapping,
         orient: FromDictOrient = "columns",
         dtype: Dtype | None = None,
         columns: Axes | None = None,
@@ -1764,7 +1764,7 @@ class DataFrame(NDFrame, OpsMixin):
 
         Parameters
         ----------
-        data : dict
+        data : Mapping
             Of the form {field : array-like} or {field : dict}.
         orient : {'columns', 'index', 'tight'}, default 'columns'
             The "orientation" of the data. If the keys of the passed dict

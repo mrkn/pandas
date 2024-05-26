@@ -2945,7 +2945,7 @@ class TestDataFrameConstructorWithDatetimeTZ:
         tm.assert_series_equal(df["A"], Series(idx, name="A"))
         tm.assert_series_equal(df["B"], Series(dr, name="B"))
 
-    def test_from_mappiog_list(self):
+    def test_from_mapping_list(self):
         idx = Index(date_range("20130101", periods=3, tz="US/Eastern"), name="foo")
         dr = date_range("20130110", periods=3)
         data = DataFrame({"A": idx, "B": dr})
@@ -2960,7 +2960,7 @@ class TestDataFrameConstructorWithDatetimeTZ:
         tm.assert_series_equal(df["A"], Series(idx, name="A"))
         tm.assert_series_equal(df["B"], Series(dr, name="B"))
 
-    def test_from_mappiog_sequence(self):
+    def test_from_mapping_sequence(self):
         idx = Index(date_range("20130101", periods=3, tz="US/Eastern"), name="foo")
         dr = date_range("20130110", periods=3)
         data = DataFrame({"A": idx, "B": dr})
